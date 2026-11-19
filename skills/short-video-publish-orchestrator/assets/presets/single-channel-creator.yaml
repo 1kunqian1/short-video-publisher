@@ -1,0 +1,34 @@
+# Preset: single-channel creator
+# One YouTube channel, one TikTok account, one Instagram account, Instagram-only Reels.
+# Typical for a solo creator posting the same Short everywhere.
+
+browser:
+  chrome_profile_directory: "Default"       # CHANGE ME if your accounts live in another profile
+  os: macos
+
+youtube:
+  default_channel: main
+  channels:
+    - key: main
+      name: "My Channel"                    # CHANGE ME
+      channel_id: "UCxxxxxxxxxxxxxxxxxxxxxx" # CHANGE ME
+      handle: "@mychannel"                  # CHANGE ME
+      language: "English"
+      default_category: "People & Blogs"
+
+tiktok:
+  handle: "@myhandle"                       # CHANGE ME
+  music_copyright_check: true
+
+instagram:
+  username: "myhandle"                      # CHANGE ME
+  business_suite:
+    asset_id: "0000000000000000"            # CHANGE ME
+    business_id: "0000000000000000"         # CHANGE ME
+  post_to: instagram_only
+
+defaults:
+  made_for_kids: false
+  paid_promotion: false
+  ai_disclosure: false
+  comments: true

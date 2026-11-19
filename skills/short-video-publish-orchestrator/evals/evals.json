@@ -1,0 +1,43 @@
+{
+  "skill_name": "short-video-publish-orchestrator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "ok the thumbnail tips short is done, final cut is in shorts/thumbnail-tips/final/thumbnail-tips-final.mp4 and the metadata note is shorts/thumbnail-tips/upload-metadata.md. upload it to social media pls",
+      "expected_output": "Agent loads publish-config.yaml, checks the video is vertical and <=180 s, prepares a <2 MB JPEG cover, opens three tabs in the configured Chrome profile (not new_page), checks the account on each platform, starts all three uploads before filling any, fills YouTube/TikTok/Instagram, stops before Publish/Post/Share, and reports with the hand-over table.",
+      "files": [],
+      "assertions": [
+        "Opens tabs with the configured --profile-directory instead of the MCP new_page tool",
+        "Reads the YouTube CHANNEL_ID and compares it with the config before uploading",
+        "Starts all three uploads before filling in any form",
+        "Never clicks Publish, Post or Share",
+        "Switches on TikTok's Music copyright check",
+        "Does not wait for YouTube's copyright check before moving to Visibility",
+        "Final message contains a table with TikTok, Instagram and YouTube rows and the user's next click for each"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Post my new reel to YouTube Shorts, TikTok and IG. It's ~/Movies/exports/morning-routine-v3.mp4, caption: 'My 5am routine that actually stuck. #morningroutine #productivity #5amclub'. There's no metadata file, just use that caption. Title for youtube: My 5am routine that finally stuck",
+      "expected_output": "Agent creates or proposes a metadata note from the given caption/title, notices there's no cover file and explains the fallback per platform, checks the video spec, then runs the three platforms and stops before every final button.",
+      "files": [],
+      "assertions": [
+        "Uses the given title only for YouTube and the same caption on all three platforms",
+        "Explains what happens without a custom cover on each platform instead of stopping",
+        "Copies or references the video from a folder Chrome can read (inside the project), or asks the user to move it",
+        "Never clicks Publish, Post or Share"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "publish the short in clips/launch-teaser/ everywhere. heads up I'm not sure YouTube is on the right channel, I was using my other channel yesterday",
+      "expected_output": "Agent reads CHANNEL_ID, sees the wrong channel, switches via Account → Switch account matching the configured handle as a whole word, re-checks CHANNEL_ID, and only then uploads.",
+      "files": [],
+      "assertions": [
+        "Checks the channel before clicking Upload videos",
+        "Switches channel by handle, not by display name",
+        "Re-reads CHANNEL_ID after switching and only uploads if it matches the config"
+      ]
+    }
+  ]
+}

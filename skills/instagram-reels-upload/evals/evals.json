@@ -1,0 +1,19 @@
+{
+  "skill_name": "instagram-reels-upload",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "post shorts/thumbnail-tips/final/thumbnail-tips-final.mp4 as an instagram reel, caption from shorts/thumbnail-tips/upload-metadata.md, cover thumbnail/final/thumb_9x16.png. only instagram, not my facebook page",
+      "expected_output": "Opens the Reel composer from the config IDs, identifies the Facebook option by icon and unticks it, uploads the video, types the caption with blank lines, closes suggestions without Enter, uploads the cover through the Upload image link, waits for 'safe to publish', clicks Next, confirms Public / Share now, stops before Share and tells the user to keep the tab open.",
+      "files": [],
+      "assertions": [
+        "Unticks the Facebook option (identified by icon), leaving Instagram only",
+        "Does not tick Save preference",
+        "Uploads the cover through the Upload image link and sees Change image",
+        "Waits for 'safe to publish' before Next",
+        "Never clicks Share",
+        "Tells the user to keep the tab open because there is no draft"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+# publish-config.yaml: Short Video Publisher
+# Copy this file to your project root as `publish-config.yaml` and replace every value marked CHANGE ME.
+# Field-by-field help: references/config-reference.md
+
+browser:
+  chrome_profile_directory: "Profile 1"     # CHANGE ME: chrome://version → Profile Path → last folder
+  os: macos                                 # macos | windows | linux
+
+youtube:
+  default_channel: main
+  channels:
+    - key: main
+      name: "My Channel"                    # CHANGE ME: as shown in YouTube Studio
+      channel_id: "UCxxxxxxxxxxxxxxxxxxxxxx" # CHANGE ME: from studio.youtube.com/channel/UC...
+      handle: "@mychannel"                  # CHANGE ME
+      language: "English"
+      default_category: "Science & Technology"
+
+tiktok:
+  handle: "@myhandle"                       # CHANGE ME
+  music_copyright_check: true               # turn TikTok's Music copyright check on for every upload
+
+instagram:
+  username: "myhandle"                      # CHANGE ME (no @)
+  business_suite:
+    asset_id: "0000000000000000"            # CHANGE ME: from the Business Suite URL (asset_id=...)
+    business_id: "0000000000000000"         # CHANGE ME: from the Business Suite URL (business_id=...)
+  post_to: instagram_only                   # instagram_only | instagram_and_facebook
+
+defaults:
+  made_for_kids: false
+  paid_promotion: false
+  ai_disclosure: false                      # set true when the video shows realistic AI-generated people/scenes/voices
+  comments: true
+
+assets:                                     # optional: where to find files when no path is given
+  video_patterns: ["**/final*/*.mp4", "**/*final*.mp4"]
+  cover_patterns:
+    9x16: ["**/thumbnail*/**/*9x16*.png", "**/thumbnail*/**/*9x16*.jpg"]
+    3x4: ["**/thumbnail*/**/*3x4*.png", "**/thumbnail*/**/*3x4*.jpg"]
+  temp_dir: ".tmp/thumbs"                   # inside the project, so Chrome can read it

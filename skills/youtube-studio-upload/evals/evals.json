@@ -1,0 +1,31 @@
+{
+  "skill_name": "youtube-studio-upload",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "upload shorts/thumbnail-tips/final/thumbnail-tips-final.mp4 to my youtube channel as a short. title '2 AI thumbnail tips to stop retrying', use the caption + tags in shorts/thumbnail-tips/upload-metadata.md, cover is thumbnail/final/thumb_9x16.png",
+      "expected_output": "Confirms channel, uploads, confirms /shorts/ link, clears title by script + Backspace, types description, closes the hashtag pop-up with a real click on the title, converts the 3.7 MB PNG to a <2 MB JPEG and uploads it, sets audience/paid/AI/tags/language/category, skips waiting for checks, selects Public, stops before Publish.",
+      "files": [],
+      "assertions": [
+        "Converts the cover to a JPEG under 2 MB before uploading it",
+        "Does not use Cmd/Ctrl+A to clear the title",
+        "Does not press Enter while the hashtag suggestion list is open",
+        "Selects Public and confirms the final button reads Publish",
+        "Never clicks Publish",
+        "Does every step in the YouTube Studio browser tab"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Put videos/q3-update.mp4 on the YouTube channel. Use the thumbnail in videos/q3-thumb.jpg. (FYI the channel isn't verified yet, not sure if that matters)",
+      "expected_output": "When the 'One-time verification needed' dialog appears after Upload file, the agent clicks Cancel, stops the whole upload at that point, and tells the user to verify in Settings → Channel → Feature eligibility, without filling further fields or using any workaround.",
+      "files": [],
+      "assertions": [
+        "Stops at the thumbnail step when the verification dialog appears",
+        "Does not fill in fields after the thumbnail step",
+        "Does not inject the file into the hidden file input or work around the prompt",
+        "Tells the user exactly where to verify and that the video is a private draft"
+      ]
+    }
+  ]
+}

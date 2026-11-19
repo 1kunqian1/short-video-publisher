@@ -1,0 +1,42 @@
+# Preset: bilingual creator with two YouTube channels
+# Two channels under one Google account (e.g. a main channel + a brand account),
+# one per language. Each metadata note picks its channel with `youtube_channel: en` or `zh`.
+# The skill switches channels in YouTube Studio with Account → Switch account,
+# matching by handle, and re-checks the channel ID before uploading.
+
+browser:
+  chrome_profile_directory: "Profile 1"     # CHANGE ME
+  os: macos
+
+youtube:
+  default_channel: en
+  channels:
+    - key: en
+      name: "My Channel"                    # CHANGE ME
+      channel_id: "UCxxxxxxxxxxxxxxxxxxxxxx" # CHANGE ME
+      handle: "@mychannel"                  # CHANGE ME
+      language: "English"
+      default_category: "Science & Technology"
+    - key: zh
+      name: "我的频道"                        # CHANGE ME
+      channel_id: "UCyyyyyyyyyyyyyyyyyyyyyy" # CHANGE ME
+      handle: "@mychannel_cn"               # CHANGE ME
+      language: "Chinese (Simplified)"
+      default_category: "Science & Technology"
+
+tiktok:
+  handle: "@myhandle"                       # CHANGE ME
+  music_copyright_check: true
+
+instagram:
+  username: "myhandle"                      # CHANGE ME
+  business_suite:
+    asset_id: "0000000000000000"            # CHANGE ME
+    business_id: "0000000000000000"         # CHANGE ME
+  post_to: instagram_only
+
+defaults:
+  made_for_kids: false
+  paid_promotion: false
+  ai_disclosure: false
+  comments: true

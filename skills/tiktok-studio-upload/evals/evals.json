@@ -1,0 +1,29 @@
+{
+  "skill_name": "tiktok-studio-upload",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "can you put exports/coffee-hack.mp4 on tiktok? caption: 'This $3 coffee hack saves me 20 minutes every morning.\n\nTry it tomorrow and tell me if it works.\n\n#coffeehack #morningroutine #lifehack' and use covers/coffee_3x4.png as the cover",
+      "expected_output": "Uploads, clears the auto-filled description with script selection, types paragraphs, converts each hashtag only when the highlighted suggestion matches exactly, uploads the 3:4 cover via Edit cover, checks settings, switches on Music copyright check, waits for both checks, stops before Post.",
+      "files": [],
+      "assertions": [
+        "Clears the pre-filled file-name description before typing",
+        "Presses Enter on a hashtag suggestion only when it matches the tag exactly",
+        "Reports which hashtags became real hashtags",
+        "Switches on Music copyright check",
+        "Never clicks Post"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "tiktok upload please: renders/demo_final.mp4, caption 'New feature demo #mycoolappname2026 #saas'. no cover, just pick whatever",
+      "expected_output": "For #mycoolappname2026 the suggestion likely isn't an exact match, so the agent types a space and reports it as plain text instead of pressing Enter on a different tag; with no cover it keeps TikTok's frame and says so.",
+      "files": [],
+      "assertions": [
+        "Does not insert a different hashtag than the one in the caption",
+        "Reports any hashtag left as plain text",
+        "Keeps TikTok's default cover frame and says so"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 ---
 name: short-video-publish-orchestrator
 description: Cross-post one finished vertical short video to YouTube Shorts, TikTok and Instagram Reels in a single run, through the user's own logged-in Chrome (Chrome DevTools MCP). Gathers the video, covers and captions, checks each account, starts all three uploads in parallel tabs, fills titles, captions, real hashtags, custom covers and settings, then stops right before every final Publish / Post / Share button so the user reviews and publishes. Use this skill whenever the user wants to publish, upload, post, cross-post or "send out" a short, reel, TikTok or vertical video to more than one platform, or says things like "upload this to social media", "post it everywhere", "publish my short", even if they don't list the platforms. For a single platform, use youtube-studio-upload, tiktok-studio-upload or instagram-reels-upload instead.
-license: Proprietary. See LICENSE.md in the pack root
+license: MIT. See LICENSE.md in the pack root
 compatibility: Requires the Chrome DevTools MCP server and Google Chrome with one profile logged into YouTube, TikTok and Meta Business Suite. Bundled helper scripts are macOS; manual equivalents for Windows/Linux are in references/browser-setup.md.
 metadata:
   version: 1.0.0

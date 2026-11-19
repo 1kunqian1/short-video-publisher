@@ -1,7 +1,7 @@
 ---
 name: youtube-studio-upload
 description: Upload a video to YouTube through YouTube Studio in the user's own logged-in Chrome (Chrome DevTools MCP). Confirms the right channel first (switching channels if needed), uploads the file, fills title, description, custom thumbnail, audience, tags, language, category, AI and paid-promotion disclosures, sets visibility to Public (or Schedule), and stops right before the Publish button so the user reviews and publishes. Use this skill whenever the user wants to upload, post or publish a YouTube Short or YouTube video from a file, put a video "on my channel", or fill in YouTube Studio for them, even if they don't say "Studio" or "browser". For posting the same Short to TikTok and Instagram too, use short-video-publish-orchestrator.
-license: Proprietary. See LICENSE.md in the pack root
+license: MIT. See LICENSE.md in the pack root
 compatibility: Requires the Chrome DevTools MCP server and Google Chrome with a profile logged into the YouTube channel(s). Reads publish-config.yaml.
 metadata:
   version: 1.0.0

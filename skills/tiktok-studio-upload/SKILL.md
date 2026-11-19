@@ -1,7 +1,7 @@
 ---
 name: tiktok-studio-upload
 description: Fill in a TikTok post in TikTok Studio (tiktok.com/tiktokstudio) in the user's own logged-in Chrome (Chrome DevTools MCP). Uploads the video, replaces the auto-filled description with the caption, turns every hashtag into a real clickable TikTok hashtag, uploads a custom 3:4 cover, sets privacy, comments and AI disclosure, switches on the music copyright check, waits for both checks, and stops right before the Post button so the user reviews and posts. Use this skill whenever the user wants to upload, post or publish a video, short or clip to TikTok, or says "put this on TikTok", even if they don't mention TikTok Studio or a browser. For posting the same video to YouTube and Instagram too, use short-video-publish-orchestrator.
-license: Proprietary. See LICENSE.md in the pack root
+license: MIT. See LICENSE.md in the pack root
 compatibility: Requires the Chrome DevTools MCP server and Google Chrome with a profile logged into TikTok. Reads publish-config.yaml.
 metadata:
   version: 1.0.0

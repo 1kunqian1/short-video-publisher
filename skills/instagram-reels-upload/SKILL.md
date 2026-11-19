@@ -1,7 +1,7 @@
 ---
 name: instagram-reels-upload
 description: Fill in an Instagram Reel in Meta Business Suite (business.facebook.com) in the user's own logged-in Chrome (Chrome DevTools MCP). Sets "Post to" to the Instagram account only, uploads the video, types the caption with its line breaks, uploads a custom cover image, waits for the copyright check, and stops on the Share step with Public and Share now selected, right before the Share button, so the user reviews and shares. Use this skill whenever the user wants to post, upload or publish a Reel or vertical video to Instagram, cross-post a short to Instagram, or says "put this on IG", even if they don't mention Business Suite. For posting the same video to YouTube and TikTok too, use short-video-publish-orchestrator.
-license: Proprietary. See LICENSE.md in the pack root
+license: MIT. See LICENSE.md in the pack root
 compatibility: Requires the Chrome DevTools MCP server, Google Chrome with a profile logged into Facebook/Meta Business Suite, and an Instagram professional account connected to a Business Suite portfolio. Reads publish-config.yaml.
 metadata:
   version: 1.0.0
